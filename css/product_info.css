@@ -1,0 +1,106 @@
+body
+{
+    background-color: #FAF7F2;
+}
+
+
+.nav-bar
+{
+    background-color: #F8F3ED;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar a
+{
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+}
+
+.under-title
+{
+    margin: 0px;
+}
+
+.title
+{
+    margin: 0px;
+    font-size: 25px;
+}
+
+.nav-bar img
+{
+    margin-right: 10px;
+    padding: 0px;
+}
+
+
+.product-details
+{
+    display: flex;
+}
+
+.product-details img
+{
+ margin: 20px;
+ border-radius: 10px;
+}
+
+.picture-details
+{
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+
+li
+{
+
+    margin-right: 30px;
+}
+
+ul
+{
+    justify-self: flex-end;
+}
+
+.picture-details p
+{
+    text-align: right;
+    margin: 10px;
+    font-size: 20px;
+}
+
+hr
+{
+    margin-top: 180px;
+    opacity: 50%;
+}
+
+.you-may-like
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.you-may-like img
+{
+    border-radius: 10px;
+    margin: 0px;
+}
+
+.picture-card-details
+{
+    background-color: #fbf1df;
+}
+
+.picture-card-details p
+{
+    text-align: center;
+    margin: 0px;
+    border-radius: 10px;
+}
