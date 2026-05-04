@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/favorites.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+
+    <section>
+      <div class="title_favorite">
+        <h2>المفضلة</h2>
+      </div>
+
+      <div id="fav_Container" class="fav_Container" dir="rtl"></div>
+    </section>
+  </body>
+  <script src="../javaScript/core.js"></script>
+  <script>
+    createCards(
+      fav_products,
+      "fav_Container",
+      {
+        showCart: false,
+        showFav: true,
+        inFav: true,
+      },
+      fav_products.length,
+    );
+  </script>
+</html>

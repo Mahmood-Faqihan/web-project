@@ -58,15 +58,6 @@ header {
   line-height: 1;
 }
 
-.logo h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
-  font-size: 48px;
-  margin: 0;
-  line-height: 1;
-}
-
 .logo span {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -94,62 +85,111 @@ header {
   padding-bottom: 0;
 }
 
-.about_parent {
+.content_title h1,
+p {
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+}
+
+.content_icons {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.email img,
+.phone img,
+.address img {
+  width: 20px;
+  height: 20px;
+}
+.email,
+.address,
+.phone {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.company_info {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #dad6ae;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 30px;
+  border-radius: 10px;
+}
+
+.dis h6 {
+  margin: 0px;
+}
+
+.company_info img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.content_info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 30px;
 }
-.about_img {
-  width: 500px;
-  height: 500px;
-  border-radius: 20px;
+
+form {
+  display: flex;
+  flex-direction: column;
   margin-right: 30px;
-}
-.about_left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-}
-
-.about_left h1 {
-  font-size: 40px;
-  color: #0f0303;
-  text-align: center;
-  margin-bottom: -35px;
-}
-.about_left p {
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: center;
-  color: #333;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 1.9px solid #ccc;
+  margin-top: 15px;
+  height: 250px;
+  border-radius: 10px;
 }
 
-.about_l_ic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  width: 100%;
-}
-.about_l_ic div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
+.company_info,
+.clint_info {
+  flex: 1;
 }
 
-.about_icons {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 10px;
+form button {
+  color: black;
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-.about_l_ic h4,
-.about_l_ic p {
-  margin: 5px 0;
+
+form button:hover {
+  background-color: #dad6ae;
+}
+
+form input {
+  text-align: right;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form .message {
+  text-align: right;
+  height: 100px;
+  overflow: hidden;
+  resize: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-right: 10px;
 }
 
 /* footer */

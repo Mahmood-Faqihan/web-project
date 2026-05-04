@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>سلة التسوق</title>
+
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+
+    <h1>🛒 سلة التسوق</h1>
+
+    <!-- حاوية السلة -->
+    <div class="cart-container" id="cart-container" dir="rtl">
+      <!-- رسالة عند عدم وجود منتجات -->
+      <p id="empty-message">السلة فارغة</p>
+    </div>
+
+    <!-- الإجمالي -->
+    <div class="total">
+      <h3>الإجمالي: <span id="total-price">0</span> ريال</h3>
+    </div>
+
+    <button>إتمام الطلب</button>
+
+    <!-- ربط ملف JavaScript -->
+  </body>
+  <script src="../javaScript/core.js"></script>
+  <script src="../javaScript/cart.js"></script>
+  <script>
+    createCards(
+      cart,
+      "cart-container",
+      {
+        showCart: false,
+        showFav: true,
+        removeCart: true,
+      },
+      cart.length,
+    );
+  </script>
+</html>

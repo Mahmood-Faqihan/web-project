@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="ar" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>معلومات المنتج</title>
+
+    <link rel="stylesheet" href="../css/product_info.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"><img src="../img\user.png" alt="user icon" /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+    <section id="conatiner_information" dir="rtl">
+  
+
+    </section>
+
+    <!-- Related Products -->
+
+    <section class="related-products">
+      <h2>قد يعجبك أيضًا</h2>
+
+      <div class="related_container" id="related_container"></div>
+    </section>
+  </body>
+  <script src="../javaScript/core.js"></script>
+  <script src="../javaScript/product_info.js"></script>
+
+  <script>
+    createCards(
+      products,
+      "related_container",
+      {
+        showCart: true,
+        showFav: true,
+      },
+      products.length,
+    );
+
+  </script>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="../css/Profile.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+    <section class="profile-details" dir="rtl">
+      <div class="box">
+        <div class="profile_top">
+          <img src="../img/background.jpeg" />
+          <h3 id="profile_name"></h3>
+          <p id="profile_email"></p>
+          <p id="profile_date"></p>
+        </div>
+
+        <h3 class="card-title">معلومات الحساب</h3>
+
+        <div class="info-row">
+          <span class="info-label">اسم المستخدم</span>
+          <span class="info-value" id="profile_username"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">البريد الإلكتروني</span>
+          <span class="info-value" id="profile_Email"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">الجنس</span>
+          <span class="info-value" id="profile_Gender"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">تاريخ الميلاد</span>
+          <span class="info-value" id="profile_Birthdate"></span>
+        </div>
+      </div>
+    </section>
+
+    <button id="logoutBtn">تسجيل الخروج</button>
+
+    <script>
+      const savedUser = JSON.parse(localStorage.getItem("UserData"));
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+      if (!savedUser || isLoggedIn !== "true") {
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("profile_name").textContent =
+          savedUser.Username;
+        document.getElementById("profile_email").textContent = savedUser.Email;
+        document.getElementById("profile_date").textContent = savedUser.year;
+
+        document.getElementById("profile_username").textContent =
+          savedUser.Username;
+        document.getElementById("profile_Email").textContent = savedUser.Email;
+        document.getElementById("profile_Gender").textContent =
+          savedUser.Gender;
+        document.getElementById("profile_Birthdate").textContent =
+          savedUser.Birthdate;
+      }
+
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("isLoggedIn");
+          window.location.href = "login.html";
+        });
+    </script>
+  </body>
+</html>

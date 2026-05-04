@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل دخول</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <h2>تسجيل الدخول</h2>
+        <form id="login_form">
+          <div class="input-group">
+            <input type="text" placeholder="اسم المستخدم" id="loginUsername" />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="كلمة المرور"
+              id="loginPassword"
+            />
+          </div>
+          <div class="options"><input type="checkbox" />تذكرني</div>
+          <button>تسجيل دخول</button>
+          <p>ليس لديك حساب؟ <a href="../html/signup.html">إنشاء حساب</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("login_form");
+      form.addEventListener("submit", function (i) {
+        i.preventDefault();
+
+        const savedUser = JSON.parse(localStorage.getItem("UserData"));
+
+        const username = document.getElementById("loginUsername").value.trim();
+        const password = document.getElementById("loginPassword").value.trim();
+
+        if (
+          savedUser &&
+          username === savedUser.Username &&
+          password === savedUser.password
+        ) {
+          localStorage.setItem("isLoggedIn", "true");
+          window.location.href = "profile.html";
+        } else {
+          alert("بيانات الدخول غلط");
+        }
+      });
+    </script>
+  </body>
+</html>

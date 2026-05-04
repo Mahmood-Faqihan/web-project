@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+    <section class="conatiner">
+      <h3>جميع المنتجات</h3>
+      <div class="filtrs">
+        <div class="order">
+          <label for="desc">الترتيب</label>
+
+          <select name="desc" id="desc">
+            <option value="all">الكل</option>
+            <option value="latest">الاحدث</option>
+            <option value="offers">العروض</option>
+            <option value="best">الاكثر مبيعا</option>
+            <option value="rate">الاعلى تقييما</option>
+          </select>
+        </div>
+
+        <div class="price">
+          <label for="price">السعر</label>
+
+          <select name="price" id="price">
+            <option value="all">الكل</option>
+            <option value="low_to_high">السعر من الاقل الى الاعلى</option>
+            <option value="high_to_low">السعر من الاعلى الى الاقل</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="price">تصفية حسب</label>
+        </div>
+      </div>
+    </section>
+
+    <div id="main-container" class="main-container" dir="rtl"></div>
+  </body>
+  <script src="../javaScript/core.js"></script>
+  <script>
+    createCards(
+      products,
+      "main-container",
+      {
+        showCart: true,
+        showFav: true,
+      },
+      products.length,
+    );
+  </script>
+</html>
